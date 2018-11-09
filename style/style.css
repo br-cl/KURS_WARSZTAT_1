@@ -5,11 +5,15 @@
     width: 1100px;
 }
 
-/* sekcja pierwsza - header z menu po prawej stronie */
+a:visited {
+    color: white;
+}
 
 a {
     text-decoration: none;
 }
+
+/* sekcja pierwsza - header z menu po prawej stronie */
 
 header {
     background-color: black;
@@ -38,8 +42,8 @@ header p {
 }
 
 .header__list__item {
+    position: relative;
     display: inline-block;
-
 }
 
 .header__link {
@@ -50,24 +54,57 @@ header p {
     font-size: 15px;
 }
 
-.header__list li:last-of-type {
+.header__list > li:last-of-type {
     margin-left: 30px;
 }
 
-.header__list li:first-of-type {
+.header__list > li:first-of-type {
     margin-right: 50px;
+}
+
+.header__list__dropdown {
+    display: block;
+    position: absolute;
+    padding-top: 25px;
+    top: 22px;
+    left: -12px;
+}
+
+.header__list__dropdown:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    position: absolute;
+    border-bottom: 12px solid black;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    left: 25px;
+    top: 14px;
+}
+
+.header__list__dropdown li {
+    display: block;
+    font-family: 'Raleway', sans-serif;
+    background-color: black;
+    color: white;
+    padding: 8px 16px 8px 12px;
+}
+
+.header__list__dropdown li:nth-of-type(2) {
+    padding: 0 16px 0 12px;
 }
 
 /* sekcja druga - slider */
 
 .slider {
-    height: 420px;
+    height: 460px;
     width: 100%;
-    background: linear-gradient(to bottom, rgba(252, 252, 252, 1) 0%, rgba(252, 252, 252, 1) 39%, rgba(209, 209, 209, 1) 100%);
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(237, 237, 237, 1) 72%, rgba(189, 189, 189, 1) 100%);
 }
 
 .slider .container {
-    height: 420px;
+    height: 460px;
     display: flex;
     align-items: center;
 }
@@ -81,6 +118,11 @@ header p {
     height: 400px;
     margin-top: 20px;
     display: flex;
+    align-items: center;
+}
+
+.slider__slide1 > img {
+    width: 500px;
 }
 
 .slider__slide1__description {
@@ -123,14 +165,10 @@ header p {
     border-radius: 14px;
 }
 
-a:visited {
-    color: white;
-}
-
 /* sekcja trzecia - krzesla */
 
 .krzesla {
-    margin: 40px auto;
+    margin: 23px auto 40px auto;
     display: flex;
     justify-content: space-between;
     font-family: 'Raleway', sans-serif;
@@ -139,22 +177,22 @@ a:visited {
 .krzesla__img1 {
     background-image: url("../images/box1_img.jpg");
     background-size: cover;
-    width: 350px;
+    width: 340px;
     height: 225px;
 }
 
 .krzesla__img2 {
     background-image: url("../images/box2_img.jpg");
     background-size: cover;
-    width: 350px;
+    width: 340px;
     height: 225px;
 }
 
 .krzesla__info {
     box-sizing: border-box;
-    border: 1px solid black;
-    height: 250px;
-    width: 350px;
+    border: 1px solid lightgrey;
+    height: 255px;
+    width: 370px;
     padding: 20px;
 }
 
@@ -162,10 +200,130 @@ a:visited {
     border-bottom: 8px solid #27C7AB;
     width: 150px;
     font-weight: 700;
-    margin-bottom: 10px;
+    margin: 10px 0;
 }
 
 .krzesla__info p {
     line-height: 22px;
     font-size: 14px;
+    color: dimgrey;
+}
+
+/* sekcja czwarta - cennik. */
+
+section.cennik > div {
+    height: 450px;
+}
+
+.cennik {
+    font-family: 'Raleway', sans-serif;
+    background-color: #f0f0f0;
+    height: 620px;
+}
+
+.cennik h2 {
+    border-bottom: 10px solid #27C7AB;
+    color: dimgrey;
+    width: 320px;
+    font-weight: 500;
+    font-size: 22px;
+    padding-bottom: 10px;
+    padding-top: 30px;
+}
+
+.cennik__oferty {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.cennik__oferta {
+    width: 340px;
+    height: 450px;
+    border: 1px solid black;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cennik__oferta__circle {
+    height: 140px;
+    width: 140px;
+    border-radius: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cennik__oferta__circle p:first-child {
+    font-size: 37px;
+    font-weight: 700;
+}
+
+.cennik__oferta__circle p:last-child {
+    margin-top: 5px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.cennik__oferta--1 {
+    border: 2px solid #BABABA;
+    background-color: #F5F5F5;
+}
+
+.cennik__oferta--1 h3 {
+    color: #27C7AB;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.circle1 p:first-child {
+    font-size: 37px;
+    font-weight: 700;
+    color: #BABABA;
+}
+
+.circle1 p:last-child {
+    margin-top: 5px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #BABABA;
+}
+
+.circle1 {
+    background-color: #FCFCFC;
+    border: 2px solid #BABABA;
+}
+
+.cennik__oferta__opis p {
+    height: 50px;
+    width: 336px;
+    font-size: 25px;
+    padding-top: 8px;
+}
+
+.opis1 p:first-child {
+    background-color: #D1D1D1;
+    color: #A1A1A1;
+    border-top: 2px solid white;
+}
+
+.opis1 p:last-child {
+    background-color: #f0f0f0;
+    color: grey;
+}
+
+.cennik__oferta__button {
+    height: 30px;
+    width: 130px;
+    text-align: center;
+    border-radius: 10px;
+    padding-top: 6px;
+    margin-bottom: 14px;
+}
+.button1 {
+    background-color: #27C7AB;
 }
