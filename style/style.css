@@ -1,0 +1,171 @@
+/* style na cały dokument */
+
+.container {
+    margin: 0 auto;
+    width: 1100px;
+}
+
+/* sekcja pierwsza - header z menu po prawej stronie */
+
+a {
+    text-decoration: none;
+}
+
+header {
+    background-color: black;
+    height: 50px;
+    width: 100%;
+}
+
+header .container {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header p {
+    letter-spacing: 1px;
+    font-weight: 500;
+    font-family: 'Raleway', sans-serif;
+    font-size: 15px;
+    color: white;
+}
+
+.turquoise_bold {
+    font-weight: 800;
+    color: #27C7AB;
+}
+
+.header__list__item {
+    display: inline-block;
+
+}
+
+.header__link {
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-size: 15px;
+}
+
+.header__list li:last-of-type {
+    margin-left: 30px;
+}
+
+.header__list li:first-of-type {
+    margin-right: 50px;
+}
+
+/* sekcja druga - slider */
+
+.slider {
+    height: 420px;
+    width: 100%;
+    background: linear-gradient(to bottom, rgba(252, 252, 252, 1) 0%, rgba(252, 252, 252, 1) 39%, rgba(209, 209, 209, 1) 100%);
+}
+
+.slider .container {
+    height: 420px;
+    display: flex;
+    align-items: center;
+}
+
+.slider__arrow {
+    font-size: 80px;
+    color: #27C7AB;
+}
+
+.slider__slide1 {
+    height: 400px;
+    margin-top: 20px;
+    display: flex;
+}
+
+.slider__slide1__description {
+    height: 400px;
+    padding-right: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+}
+
+.slider__slide1__description__header {
+    font-size: 40px;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.slider__slide1__description__header > span {
+    color: #27C7AB;
+    font-weight: 700;
+}
+
+.slider__slide1__description__text {
+    word-spacing: 1px;
+    line-height: 22px;
+    margin: 20px 0;
+}
+
+.slider__slide1__description__link {
+    width: 200px;
+    height: 40px;
+    padding-top: 8px;
+    background-color: #27C7AB;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    border-radius: 14px;
+}
+
+a:visited {
+    color: white;
+}
+
+/* sekcja trzecia - krzesla */
+
+.krzesla {
+    margin: 40px auto;
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Raleway', sans-serif;
+}
+
+.krzesla__img1 {
+    background-image: url("../images/box1_img.jpg");
+    background-size: cover;
+    width: 350px;
+    height: 225px;
+}
+
+.krzesla__img2 {
+    background-image: url("../images/box2_img.jpg");
+    background-size: cover;
+    width: 350px;
+    height: 225px;
+}
+
+.krzesla__info {
+    box-sizing: border-box;
+    border: 1px solid black;
+    height: 250px;
+    width: 350px;
+    padding: 20px;
+}
+
+.krzesla__info h2 {
+    border-bottom: 8px solid #27C7AB;
+    width: 150px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.krzesla__info p {
+    line-height: 22px;
+    font-size: 14px;
+}
