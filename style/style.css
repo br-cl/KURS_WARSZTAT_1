@@ -46,7 +46,7 @@ header p {
     display: inline-block;
 }
 
-.header__list__item ul:hover .header__list__dropdown {
+.header__list__item:hover .header__list__dropdown {
     display: block;
 }
 
@@ -363,3 +363,80 @@ section.cennik > div {
     color: #27C7AB;
 }
 
+/* sekcja piąta - formularz */
+
+.form {
+    height: 560px;
+    width: 100%;
+    font-family: 'Raleway', sans-serif;
+}
+
+.form h2 {
+    border-bottom: 10px solid #27C7AB;
+    color: dimgrey;
+    width: 320px;
+    font-weight: 500;
+    font-size: 22px;
+    padding-bottom: 10px;
+    padding-top: 30px;
+}
+
+.form__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.form form {
+    width: 650px;
+    height: 370px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.form input {
+    height: 65px;
+    width: 100%px;
+    border: 1px solid  rgba(36, 188, 161, 0.48);
+    font-family: 'Raleway', sans-serif;
+    padding-top: 10px;
+    padding-left: 16px;
+}
+
+form input::placeholder {
+    font-size: 30px;
+    font-weight: 300;
+    color: #ABABAB;
+}
+
+textarea {
+    height: 200px;
+    resize: none;
+    border: 1px solid  rgba(36, 188, 161, 0.48);
+    font-family: 'Raleway', sans-serif;
+    padding-top: 10px;
+    padding-left: 16px;
+}
+
+textarea::placeholder {
+    color: #ABABAB;
+    font-size: 30px;
+    font-weight: 300;
+}
+
+.form__send {
+    width: 400px;
+    height: 370px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.form__send img {
+    position: absolute;
+    left: calc (50% - 132px);
+    top: -23px;
+}
