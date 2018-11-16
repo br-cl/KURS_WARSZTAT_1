@@ -70,7 +70,9 @@ header p {
 .header__list > li:first-of-type {
     margin-right: 50px;
 }
-
+/* 
+    Dropdown i strzałka nie są dobrze ustawione
+*/
 .header__list__dropdown {
     display: none;
     position: absolute;
